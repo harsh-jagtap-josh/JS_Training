@@ -15,33 +15,33 @@ function callbackFunc() {
   return 5;
 }
 
-test(callbackFunc); // Executes the Callback Function
-test(callbackFunc()); // returns Error
-test(() => callbackFunc()); // Executes callback function
+test(callbackFunc); // Executes the Callback Function and returns a value 5
+test(callbackFunc()); // returns Error - 'callback is not a function' because calling it while passing as argument itself returns a value 5, it would same as test(5), the function test further will be 'return callback()' i.e. '5()', which is invalid or 'not a function'.
+test(() => callbackFunc()); // Executes callback function and returns a value 5
 
 //=====================================================================================================================
 
 // d. What happens when you return callback() from the test function?
 // e. What happens when you return callback from the test function?
 
-function test2(callback) {
-  console.log("Calling test2");
+// function test2(callback) {
+//   console.log("Calling test2");
 
-  return callback();
-}
+//   return callback();
+// }
 
-function test3(callback) {
-  console.log("Calling test3");
-  return callback;
-}
+// function test3(callback) {
+//   console.log("Calling test3");
+//   return callback;
+// }
 
-function callbackFunc() {
-  console.log("Calling the callback function");
-  return 5;
-}
+// function callbackFunc() {
+//   console.log("Calling the callback function");
+//   return 5;
+// }
 
-test2(callbackFunc); // works fine here.. as we take callback function as an input and call the callback function returning it at the same time, which will return the value 5 which is not stored anywhere, hence only a log.
-test3(callbackFunc); // here we only take a function as input and return the same function without even executing it, hence the return value is also a function. If store this value in a variable, this variable can be called as it will basically store the callback function.
+// test2(callbackFunc); // works fine here.. as we take callback function as an input and call the callback function returning it at the same time, which will return the value 5 which is not stored anywhere, hence only a log.
+// test3(callbackFunc); // here we only take a function as input and return the same function without even executing it, hence the return value is also a function. If store this value in a variable, this variable can be called as it will basically store the callback function.
 
-// test3 function will be executed if we call the whole as given below:
-test3(callbackFunc)();
+// // test3 function will be executed if we call the whole as given below:
+// test3(callbackFunc)();

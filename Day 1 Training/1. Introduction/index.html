@@ -1,4 +1,3 @@
-
 <!-- QUESTION 1
 
 1. Create a simple HTML file in notepad (do not use VSCode). To this, add some javascri by: 
@@ -11,20 +10,18 @@
 <!-- Q1) a. Writing javascript between script tags -->
 
 <html>
-    <head>
-        <title>Javascript Training</title>
-    </head>
-    <body>
-        <h1 id="test">Hello World!</h1>
-        <script>
-            document.getElementById("test").innerHTML = "Goodbye World!"
-        </script>
-    </body>
+  <head>
+    <title>Javascript Training</title>
+  </head>
+  <body>
+    <h1 id="test">Hello World!</h1>
+    <script>
+      document.getElementById("test").innerHTML = "Goodbye World!";
+    </script>
+  </body>
 </html>
 
-
 <!-- ================================================================================ -->
-
 
 <!-- Q1) b. Writing javascript in a file and passing that as a src in the script tag -->
 
@@ -37,7 +34,6 @@
         <script src="script.js"></script>
     </body>
 </html> -->
-
 
 <!-- =================================================================================================================================================== -->
 <!-- =================================================================================================================================================== -->
@@ -53,24 +49,21 @@ Given the above html, find out what happens when you try to access the element h
 -->
 <!-- =============================================================================== -->
 
-
 <!-- Q2) a. using script tag in head tag -->
 
 <!-- <html>
     <head>
         <title>Javascript Training</title>
-    </head>
-    <body>
-        <h1 id="test">Hello World!</h1>
         <script>
             document.getElementById("test").innerHTML = "Goodbye World!"
         </script>
+    </head>
+    <body>
+        <h1 id="test">Hello World!</h1>
     </body>
 </html> -->
 
-
 <!-- ============================================================================= -->
-
 
 <!-- Q2) b. using script tag at the start of the body tag -->
 
@@ -79,16 +72,14 @@ Given the above html, find out what happens when you try to access the element h
         <title>Javascript Training</title>
     </head>
     <body>
-        <h1 id="test">Hello World!</h1>
         <script>
             document.getElementById("test").innerHTML = "Goodbye World!"
         </script>
+        <h1 id="test">Hello World!</h1>
     </body>
 </html> -->
 
-
 <!-- =========================================================================== -->
-
 
 <!-- Q2) c. using script tag at the end of the body tag -->
 
@@ -101,7 +92,6 @@ Given the above html, find out what happens when you try to access the element h
         <script>
             document.getElementById("test").innerHTML = "Goobye World!"
         </script>
-        <script src="script.js"></script>
     </body>
 </html>
 
