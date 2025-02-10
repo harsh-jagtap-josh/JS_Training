@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Fetch Users</title>
+  </head>
+  <body style="text-align: center">
+    <div>
+      <h1>QUESTION</h1>
+      <p style="padding-left: 30%; padding-right: 30%">
+        Create a blog list page that fetches a list of users from a mock API and
+        adds them to a table on the page after loading. Add a button to sort the
+        users by name. Add an input to filter the table by search. (Optional:
+        Show “Loading...” or a loading spinner on the scre till the data loads)
+      </p>
+    </div>
+
+    <input
+      type="text"
+      id="search"
+      placeholder="Press Enter after entering..."
+    />
+
+    <div>
+      <table id="table">
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Avatar</th>
+        </tr>
+      </table>
+    </div>
+    <p id="loading">Loading...</p>
+    <div>
+      <button id="sortData">Sort Data</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
