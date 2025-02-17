@@ -1,0 +1,31 @@
+table,
+tr,
+td,
+th {
+  border: 1px solid;
+}
+
+image {
+  border-radius: 2px;
+}
+
+table {
+  margin: 30px;
+  display: inline-block;
+}
+
+td {
+  padding: 5px;
+}
+
+button {
+  font-size: larger;
+}
+
+#loading {
+  font-size: 40px;
+}
+
+input {
+  padding: 5px;
+}
