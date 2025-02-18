@@ -1,0 +1,109 @@
+<!-- QUESTION 1
+
+1. Create a simple HTML file in notepad (do not use VSCode). To this, add some javascri by: 
+    a. Writing javascript between script tags 
+    b. Writing javascript in a file and passing that as a src in the script tag
+-->
+
+<!-- ===============================================================================-->
+
+<!-- Q1) a. Writing javascript between script tags -->
+
+<!-- <html>
+  <head>
+    <title>Javascript Training</title>
+  </head>
+  <body>
+    <h1 id="test">Hello World!</h1>
+    <script>
+      document.getElementById("test").innerHTML = "Goodbye World!";
+    </script>
+  </body>
+</html> -->
+
+<!-- ================================================================================ -->
+
+<!-- Q1) b. Writing javascript in a file and passing that as a src in the script tag -->
+
+<!-- <html>
+    <head>
+        <title>Javascript Training</title>
+    </head>
+    <body>
+        <h1 id="test">Hello World!</h1>
+        <script src="script.js"></script>
+    </body>
+</html> -->
+
+<!-- =================================================================================================================================================== -->
+<!-- =================================================================================================================================================== -->
+<!--  
+
+QUESTION 2
+
+Given the above html, find out what happens when you try to access the element h1 in javascript (using document.getElementById) and change its content to “Goodbye World” when the script is attached: 
+● in the head tag 
+● at the start of the body tag 
+● at the end of the body tag  
+
+-->
+<!-- =============================================================================== -->
+
+<!-- Q2) a. using script tag in head tag -->
+
+<!-- <html>
+  <head>
+    <title>Javascript Training</title>
+    <script>
+      document.getElementById("test").innerHTML = "Goodbye World!";
+    </script>
+  </head>
+  <body>
+    <h1 id="test">Hello World!</h1>
+  </body>
+</html> -->
+
+<!-- Here, we can add a script tag in the `head` of HTML, but it doesn't work because HTML uses a top-down approach.
+     So, HTML will read the head tag first and the script tag inside, here as we haven't red the body yet, it won't be able to find element in script  
+     Hence, won't change the inner html of element.
+-->
+
+<!-- ============================================================================= -->
+
+<!-- Q2) b. using script tag at the start of the body tag -->
+
+<!-- <html>
+  <head>
+    <title>Javascript Training</title>
+  </head>
+  <body>
+    <script>
+      document.getElementById("test").innerHTML = "Goodbye World!";
+    </script>
+    <h1 id="test">Hello World!</h1>
+  </body>
+</html> -->
+
+<!-- 
+  Here, the script tag doesn't work, the reason is same as of putting it in the head tag
+-->
+<!-- =========================================================================== -->
+
+<!-- Q2) c. using script tag at the end of the body tag -->
+
+<html>
+  <head>
+    <title>Javascript Training</title>
+  </head>
+  <body>
+    <h1 id="test">Hello World!</h1>
+    <script>
+      document.getElementById("test").innerHTML = "Goobye World!";
+    </script>
+  </body>
+</html>
+
+<!-- 
+ This works totally fine, as the whole body will be scanned by HTML and then the script tag will run which will access the html element 
+ and change the inner html.
+-->
